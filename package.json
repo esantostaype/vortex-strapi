@@ -9,12 +9,13 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.19.0",
-    "@strapi/plugin-users-permissions": "4.19.0",
-    "@strapi/plugin-i18n": "4.19.0",
     "@strapi/plugin-cloud": "4.19.0",
+    "@strapi/plugin-i18n": "4.19.0",
+    "@strapi/plugin-users-permissions": "4.19.0",
+    "@strapi/provider-email-sendgrid": "^4.19.0",
+    "@strapi/provider-upload-cloudinary": "^4.19.0",
+    "@strapi/strapi": "4.19.0",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
