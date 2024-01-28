@@ -935,12 +935,6 @@ export interface ApiServiceService extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    icon: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     color: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -977,6 +971,12 @@ export interface ApiServiceService extends Schema.CollectionType {
       'manyToOne',
       'api::project.project'
     >;
+    icon: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

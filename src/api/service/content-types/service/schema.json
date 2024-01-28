@@ -24,14 +24,6 @@
         }
       }
     },
-    "icon": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "color": {
       "type": "string",
       "pluginOptions": {
@@ -89,6 +81,18 @@
       "relation": "manyToOne",
       "target": "api::project.project",
       "inversedBy": "services"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
