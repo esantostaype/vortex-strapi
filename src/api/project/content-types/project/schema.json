@@ -24,17 +24,17 @@
       },
       "type": "string"
     },
-    "services": {
+    "service": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::service.service",
-      "mappedBy": "project"
+      "inversedBy": "projects"
     },
-    "technologies": {
+    "technology": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::technology.technology",
-      "mappedBy": "project"
+      "inversedBy": "projects"
     },
     "gallery": {
       "type": "media",

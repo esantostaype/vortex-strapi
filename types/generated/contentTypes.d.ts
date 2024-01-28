@@ -860,14 +860,14 @@ export interface ApiProjectProject extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    services: Attribute.Relation<
+    service: Attribute.Relation<
       'api::project.project',
-      'oneToMany',
+      'manyToOne',
       'api::service.service'
     >;
-    technologies: Attribute.Relation<
+    technology: Attribute.Relation<
       'api::project.project',
-      'oneToMany',
+      'manyToOne',
       'api::technology.technology'
     >;
     gallery: Attribute.Media &
@@ -966,17 +966,17 @@ export interface ApiServiceService extends Schema.CollectionType {
         };
       }>;
     slug: Attribute.UID<'api::service.service', 'name'>;
-    project: Attribute.Relation<
-      'api::service.service',
-      'manyToOne',
-      'api::project.project'
-    >;
     icon: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    projects: Attribute.Relation<
+      'api::service.service',
+      'oneToMany',
+      'api::project.project'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1014,9 +1014,9 @@ export interface ApiTechnologyTechnology extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     icon: Attribute.Media;
-    project: Attribute.Relation<
+    projects: Attribute.Relation<
       'api::technology.technology',
-      'manyToOne',
+      'oneToMany',
       'api::project.project'
     >;
     createdAt: Attribute.DateTime;

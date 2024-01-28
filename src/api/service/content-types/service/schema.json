@@ -76,12 +76,6 @@
       "type": "uid",
       "targetField": "name"
     },
-    "project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "services"
-    },
     "icon": {
       "type": "media",
       "multiple": false,
@@ -94,6 +88,12 @@
           "localized": true
         }
       }
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "service"
     }
   }
 }

@@ -21,11 +21,11 @@
       "type": "media",
       "multiple": false
     },
-    "project": {
+    "projects": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::project.project",
-      "inversedBy": "technologies"
+      "mappedBy": "technology"
     }
   }
 }
