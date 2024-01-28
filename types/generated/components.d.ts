@@ -32,12 +32,13 @@ export interface ServicesProcess extends Schema.Component {
   collectionName: 'components_services_processes';
   info: {
     displayName: 'Process';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
-    icon: Attribute.String;
     description: Attribute.Text;
     image: Attribute.Media;
+    icon: Attribute.Media;
   };
 }
 
