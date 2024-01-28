@@ -860,14 +860,14 @@ export interface ApiProjectProject extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    service: Attribute.Relation<
+    services: Attribute.Relation<
       'api::project.project',
-      'manyToOne',
+      'manyToMany',
       'api::service.service'
     >;
-    technology: Attribute.Relation<
+    technologies: Attribute.Relation<
       'api::project.project',
-      'manyToOne',
+      'manyToMany',
       'api::technology.technology'
     >;
     gallery: Attribute.Media &
@@ -974,7 +974,7 @@ export interface ApiServiceService extends Schema.CollectionType {
       }>;
     projects: Attribute.Relation<
       'api::service.service',
-      'oneToMany',
+      'manyToMany',
       'api::project.project'
     >;
     createdAt: Attribute.DateTime;
@@ -1016,7 +1016,7 @@ export interface ApiTechnologyTechnology extends Schema.CollectionType {
     icon: Attribute.Media;
     projects: Attribute.Relation<
       'api::technology.technology',
-      'oneToMany',
+      'manyToMany',
       'api::project.project'
     >;
     createdAt: Attribute.DateTime;
