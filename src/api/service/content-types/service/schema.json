@@ -94,6 +94,17 @@
       "relation": "manyToMany",
       "target": "api::project.project",
       "mappedBy": "services"
+    },
+    "adjectives": {
+      "displayName": "adjectives",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "services.adjectives"
     }
   }
 }

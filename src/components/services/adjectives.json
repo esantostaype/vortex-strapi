@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_services_adjectives",
+  "info": {
+    "displayName": "adjectives"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

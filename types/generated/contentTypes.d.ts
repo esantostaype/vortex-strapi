@@ -977,6 +977,12 @@ export interface ApiServiceService extends Schema.CollectionType {
       'manyToMany',
       'api::project.project'
     >;
+    adjectives: Attribute.Component<'services.adjectives', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

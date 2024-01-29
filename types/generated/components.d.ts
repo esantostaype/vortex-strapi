@@ -28,6 +28,16 @@ export interface HomeHero extends Schema.Component {
   };
 }
 
+export interface ServicesAdjectives extends Schema.Component {
+  collectionName: 'components_services_adjectives';
+  info: {
+    displayName: 'adjectives';
+  };
+  attributes: {
+    name: Attribute.String;
+  };
+}
+
 export interface ServicesProcess extends Schema.Component {
   collectionName: 'components_services_processes';
   info: {
@@ -47,6 +57,7 @@ declare module '@strapi/types' {
     export interface Components {
       'home.about': HomeAbout;
       'home.hero': HomeHero;
+      'services.adjectives': ServicesAdjectives;
       'services.process': ServicesProcess;
     }
   }
