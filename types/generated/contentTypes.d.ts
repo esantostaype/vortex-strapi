@@ -918,6 +918,41 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
 }
 
+export interface ApiQuotationQuotation extends Schema.CollectionType {
+  collectionName: 'quotations';
+  info: {
+    singularName: 'quotation';
+    pluralName: 'quotations';
+    displayName: 'Quotation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    service: Attribute.String;
+    fullName: Attribute.String;
+    phone: Attribute.BigInteger;
+    email: Attribute.Email;
+    description: Attribute.Text;
+    files: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quotation.quotation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quotation.quotation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.CollectionType {
   collectionName: 'services';
   info: {
@@ -1070,6 +1105,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::home.home': ApiHomeHome;
       'api::project.project': ApiProjectProject;
+      'api::quotation.quotation': ApiQuotationQuotation;
       'api::service.service': ApiServiceService;
       'api::technology.technology': ApiTechnologyTechnology;
     }
