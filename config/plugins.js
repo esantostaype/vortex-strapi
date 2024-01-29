@@ -7,7 +7,7 @@ module.exports = ({ env }) => ({
           },
               settings: {
               defaultFrom: 'Vortex Studio <noreply@vortexstudio.pe>',
-              defaultReplyTo: 'contact@vortexstudio.pe',
+              defaultReplyTo: 'contacto@vortexstudio.pe',
           },
       },
   },

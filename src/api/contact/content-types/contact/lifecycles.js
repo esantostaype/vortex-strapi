@@ -11,7 +11,7 @@ module.exports = {
             });
 
             await strapi.plugins['email'].services.email.send({
-                to: 'contact@vortexstudio.pe',
+                to: 'contacto@vortexstudio.pe',
                 from: 'Vortex Studio <noreply@vortexstudio.pe>',
                 subject: 'Nuevo Mensaje del Website',
                 text: 'Vortex Studio',
